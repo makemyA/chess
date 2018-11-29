@@ -37,9 +37,18 @@ for (let i=1; i<65;i++){
     '<li class="cell" id="cell'+i+'"></li>'
     );   
 };
-for (let i=0; i<8; i++){
+//positionnement des soldats blancs
+for (let i=1; i<9; i++){
     boardContainer.insertAdjacentHTML('afterend',
-    '<img class="item" src="./images/whitepawn.png">'
+    '<img onclick="move(this)" id="pion'+i+'" class="item" src="./images/whitepawn.png">'
     )
+}
+let item= document.querySelectorAll('.item');
+let move= (e)=>{
+    console.log(e.id);
+    item.forEach(element => {
+        element.classList.remove('select');
+    });
+    e.classList.toggle('select');
 }
 //générer les pièces
