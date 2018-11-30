@@ -31,18 +31,19 @@ console.log("Test console");
 */
 //generer l'échiquier
 let boardContainer = document.getElementById('board_container');
-let cell = document.querySelectorAll('.cell');
 for (let i=1; i<65;i++){
     boardContainer.insertAdjacentHTML('afterbegin',
     '<li class="cell" id="cell'+i+'"></li>'
     );   
 };
 //positionnement des soldats blancs
-for (let i=1; i<9; i++){
-    boardContainer.insertAdjacentHTML('afterend',
-    '<img onclick="move(this)" id="pion'+i+'" class="item" src="./images/whitepawn.png">'
+let cell = document.querySelectorAll('.cell');
+cell.forEach((item, index)=>{
+    console.log('item');
+    item.insertAdjacentHTML('afterbegin',
+    '<img onclick="move(this)" id="pion'+(index+1)+'" class="item" src="./images/whitepawn.png">'
     )
-}
+});
 let item= document.querySelectorAll('.item');
 let move= (e)=>{
     console.log(e.id);

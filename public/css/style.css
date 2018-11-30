@@ -32,11 +32,11 @@ body {
 
 img.item {
   position: relative;
-  top: -110px;
-  margin: 0 1em;
+  top: 0;
+  left: 0;
   width: 30px;
   height: 30px;
   background-color: transparent;
   cursor: pointer; }
   img.item.select {
-    background-color: blue; }
+    background-color: red; }
