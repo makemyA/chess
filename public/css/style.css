@@ -8,8 +8,8 @@ body {
     justify-content: center;
     align-items: center; }
   body .container_chess {
-    height: 500px;
-    width: 500px; }
+    height: 400px;
+    width: 400px; }
     body .container_chess #board_container {
       list-style: none;
       display: grid;
@@ -19,24 +19,34 @@ body {
       padding: 0;
       margin: 2em 0 0 0;
       height: 100%;
-      width: 100%;
-      opacity: 0.5; }
+      width: 100%; }
       body .container_chess #board_container .cell {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: blue;
         color: white; }
-        body .container_chess #board_container .cell:hover {
+        body .container_chess #board_container .cell.select {
           background-color: red; }
-
-img.item {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  cursor: pointer; }
-  img.item.select {
-    background-color: red; }
+    body .container_chess #items_container {
+      position: relative;
+      top: -100%;
+      left: 0;
+      list-style: none;
+      display: grid;
+      grid-gap: 2px;
+      padding: 0;
+      margin: 0 0 0 0;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      color: white; }
+      body .container_chess #items_container .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        width: 48px;
+        height: 48px; }
+        body .container_chess #items_container .item:hover {
+          background-color: red; }
