@@ -1,5 +1,5 @@
 body {
-  background-color: yellow; }
+  background-color: red; }
   body h1 {
     font-size: 3em;
     text-align: center; }
@@ -34,10 +34,10 @@ body {
 
 .piece {
   position: relative;
-  left: 30%;
-  width: 50%;
-  height: 50%;
-  cursor: pointer; }
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+  color: white; }
   .piece:hover {
     background-color: red;
     color: white; }
@@ -59,3 +59,6 @@ body {
   .possibleMove:hover {
     background-color: blue;
     color: red; }
+
+.test {
+  background-color: green; }
